@@ -117,3 +117,120 @@
 // }
 
 #endregion
+
+
+#region 6.Create a struct called "Point" to represent a 2D point with properties "X" and "Y". Write a C# program that takes two points as input from the user and calculates the distance between them.
+//struct Point
+//{
+//    public double X { get; set; }
+//    public double Y { get; set; }
+//}
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Point point1, point2;
+
+//        point1 = ReadPoint("first");
+//        point2 = ReadPoint("second");
+
+//        double distance = CalculateDistance(point1, point2);
+
+//        Console.WriteLine($"The distance between the two points is: {distance:F2}");
+//    }
+
+//    static Point ReadPoint(string pointName)
+//    {
+//        double x, y;
+//        bool xFlag, yFlag;
+
+//        do
+//        {
+//            Console.WriteLine($"Enter the X coordinate of the {pointName} point:");
+//            string inputX = Console.ReadLine();
+//            xFlag = !double.TryParse(inputX, out x);
+
+//        } while (xFlag);
+
+//        do
+//        {
+//            Console.WriteLine($"Enter the Y coordinate of the {pointName} point:");
+//            string inputY = Console.ReadLine();
+//            yFlag = !double.TryParse(inputY, out y);
+
+//        } while (yFlag);
+
+//        return new Point { X = x, Y = y };
+//    }
+
+//    static double CalculateDistance(Point p1, Point p2)
+//    {
+//        double dx = p2.X - p1.X;
+//        double dy = p2.Y - p1.Y;
+
+//        return Math.Sqrt(dx * dx + dy * dy);
+//    }
+//}
+
+#endregion
+
+#region 7_8
+
+//struct Person
+//{
+//    public string Name { get; set; }
+//    public int Age { get; set; }
+//}
+
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Person person1 = ReadPerson("first");
+//        Person person2 = ReadPerson("second");
+//        Person person3 = ReadPerson("third");
+
+//        Person oldestPerson = FindOldest(person1, person2, person3);
+
+//        Console.WriteLine($"The oldest person is {oldestPerson.Name}, aged {oldestPerson.Age}.");
+//    }
+
+//    static Person ReadPerson(string personOrder)
+//    {
+//        string name;
+//        int age;
+//        bool nameFlag, ageFlag;
+
+//        do
+//        {
+//            Console.WriteLine($"Enter the name of the {personOrder} person:");
+//            name = Console.ReadLine();
+//            nameFlag = string.IsNullOrWhiteSpace(name);
+//        } while (nameFlag);
+
+//        do
+//        {
+//            Console.WriteLine($"Enter the age of the {personOrder} person:");
+//            string inputAge = Console.ReadLine();
+//            ageFlag = !int.TryParse(inputAge, out age) || age < 0;
+//        } while (ageFlag);
+
+//        return new Person { Name = name, Age = age };
+//    }
+
+//    static Person FindOldest(Person p1, Person p2, Person p3)
+//    {
+//        Person oldest = p1;
+
+//        if (p2.Age > oldest.Age)
+//            oldest = p2;
+
+//        if (p3.Age > oldest.Age)
+//            oldest = p3;
+
+//        return oldest;
+//    }
+//}
+
+#endregion
